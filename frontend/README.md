@@ -1,4 +1,4 @@
-# frontend
+# DeAi Frontend
 
 A new Flutter project.
 
