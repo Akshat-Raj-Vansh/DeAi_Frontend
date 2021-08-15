@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/Constants/constraints.dart';
+import 'package:frontend/Constants/strings.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../AnimatedText/animatedText.dart';
 import '../AnimatedText/typwriter.dart';
@@ -12,21 +14,33 @@ class Home extends StatelessWidget {
     elevation: 0,
     onSurface: Colors.transparent,
   );
-  TextStyle textStyle1 =
-      TextStyle(color: Color.fromRGBO(85, 90, 100, 1), fontSize: 20);
 
-  TextStyle textStyle2 = TextStyle(color: Colors.white, fontSize: 24);
-
-  TextStyle textStyle3 = TextStyle(
-    color: Color.fromRGBO(85, 90, 100, 1),
-    fontSize: 28.0,
-    fontWeight: FontWeight.bold,
+  final TextStyle textStyle0 = GoogleFonts.nixieOne(
+    textStyle: TextStyle(color: Colors.white60, fontSize: 20),
   );
 
-  TextStyle textStyle4 = TextStyle(
-    color: Colors.blue,
-    fontSize: 28.0,
-    fontWeight: FontWeight.bold,
+  final TextStyle textStyle1 = GoogleFonts.nixieOne(
+    textStyle: TextStyle(color: Color.fromRGBO(85, 90, 100, 1), fontSize: 20),
+  );
+
+  final TextStyle textStyle2 = GoogleFonts.nixieOne(
+    textStyle: TextStyle(color: Colors.white, fontSize: 24),
+  );
+
+  final TextStyle textStyle3 = GoogleFonts.nixieOne(
+    textStyle: TextStyle(
+      color: Color.fromRGBO(85, 90, 100, 1),
+      fontSize: 28.0,
+      fontWeight: FontWeight.bold,
+    ),
+  );
+
+  final TextStyle textStyle4 = GoogleFonts.nixieOne(
+    textStyle: TextStyle(
+      color: Colors.blue,
+      fontSize: 28.0,
+      fontWeight: FontWeight.bold,
+    ),
   );
 
   final Gradient linearGradient = LinearGradient(
@@ -39,7 +53,8 @@ class Home extends StatelessWidget {
       decoration: kBoxDecoration,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Decentralised Artificial Intelligence"),
+          title:
+              Text("Decentralised Artificial Intelligence", style: textStyle0),
           backgroundColor: Colors.transparent,
           elevation: 0,
           titleSpacing: 50,
@@ -58,7 +73,8 @@ class Home extends StatelessWidget {
                       ),
                       style: buttonStyle1),
                   ElevatedButton(
-                    onPressed: () => null,
+                    onPressed: () =>
+                        Navigator.pushNamed(context, DASHBOARD_SCREEN),
                     child: Text("Dashboard", style: textStyle1),
                     style: buttonStyle1,
                   ),
@@ -112,14 +128,14 @@ class Home extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Text(
-              "The Decentralized",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-                fontSize: 84,
-              ),
-            ),
+            Text("The Decentralized",
+                style: GoogleFonts.squadaOne(
+                  textStyle: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 84,
+                  ),
+                )),
             Container(
               child: ShaderMask(
                 shaderCallback: (bounds) => linearGradient.createShader(
@@ -127,20 +143,24 @@ class Home extends StatelessWidget {
                 ),
                 child: Text(
                   "Artificial Intelligence",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 132,
+                  style: GoogleFonts.squadaOne(
+                    textStyle: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 132,
+                    ),
                   ),
                 ),
               ),
             ),
             Text(
               "of Modern Times",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-                fontSize: 84,
+              style: GoogleFonts.squadaOne(
+                textStyle: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 84,
+                ),
               ),
             ),
             SizedBox(height: 20),
